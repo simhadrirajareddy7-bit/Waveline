@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waveline | Music Streaming</title>
+  <meta name="description" content="Waveline is a music streaming website with artists, albums, playlists, recently played songs, popular tracks and a music player.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CSS-only switches: the mobile menu and the play / pause button -->
+  <input type="checkbox" id="menu" class="switch" aria-label="Open menu">
+  <input type="checkbox" id="play" class="switch" aria-label="Play or pause the current song">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#home" class="logo" aria-label="Waveline home">
+        <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        Waveline
+      </a>
+
+      <label for="menu" class="menu-btn" aria-hidden="true"><span></span><span></span><span></span></label>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#recent">Recently Played</a>
+        <a href="#popular">Popular</a>
+        <a href="#artists">Artists</a>
+        <a href="#albums">Albums</a>
+        <a href="#playlists">Playlists</a>
+      </nav>
+
+      <form class="search" role="search" onsubmit="return false">
+        <label for="search" class="sr-only">Search songs, artists or albums</label>
+        <input type="search" id="search" placeholder="Search songs, artists, albums">
+      </form>
+
+      <a href="#join" class="btn btn-small">Sign up</a>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Free for 30 days</p>
+          <h1>Every mood has a soundtrack.</h1>
+          <p class="lead">Stream 40 million songs, follow your favourite artists and build playlists that match your day. No ads between tracks on Waveline Plus.</p>
+          <div class="hero-actions">
+            <label for="play" class="btn">Play now</label>
+            <a href="#playlists" class="btn btn-ghost">Browse playlists</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>40M+</strong> songs</li>
+            <li><strong>2.1M</strong> playlists</li>
+            <li><strong>320 kbps</strong> audio</li>
+          </ul>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="vinyl"></div>
+          <div class="hero-badge">
+            <span class="eq"><i></i><i></i><i></i><i></i></span>
+            Now spinning: Monsoon Lights
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECENTLY PLAYED ============ -->
+    <section class="section" id="recent">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Recently played</h2>
+          <a href="#albums" class="see-all">See all</a>
+        </div>
+
+        <ul class="rail">
+          <li class="mini">
+            <div class="cover c1"><label for="play" class="fab" aria-label="Play Monsoon Lights"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Monsoon Lights</h3>
+            <p>Ananya Rao</p>
+          </li>
+          <li class="mini">
+            <div class="cover c2"><label for="play" class="fab" aria-label="Play Slow Tide"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Slow Tide</h3>
+            <p>Lila &amp; the Tides</p>
+          </li>
+          <li class="mini">
+            <div class="cover c3"><label for="play" class="fab" aria-label="Play Night Bus 47"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Night Bus 47</h3>
+            <p>Kairo Sound</p>
+          </li>
+          <li class="mini">
+            <div class="cover c4"><label for="play" class="fab" aria-label="Play Golden Hour Drive"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Golden Hour Drive</h3>
+            <p>Dune Parade</p>
+          </li>
+          <li class="mini">
+            <div class="cover c5"><label for="play" class="fab" aria-label="Play Green Room"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Green Room</h3>
+            <p>Teja Varma</p>
+          </li>
+          <li class="mini">
+            <div class="cover c6"><label for="play" class="fab" aria-label="Play Paper Planets"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Paper Planets</h3>
+            <p>Mira Vale</p>
+          </li>
+          <li class="mini">
+            <div class="cover c7"><label for="play" class="fab" aria-label="Play Ripple Effect"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Ripple Effect</h3>
+            <p>Sana Iqbal</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ POPULAR TRACKS ============ -->
+    <section class="section" id="popular">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Popular this week</h2>
+          <span class="muted">Updated every Friday</span>
+        </div>
+
+        <ol class="tracks">
+          <li class="track">
+            <span class="rank">1</span>
+            <div class="cover c1 thumb"></div>
+            <div class="track-info"><h3>Monsoon Lights</h3><p>Ananya Rao</p></div>
+            <span class="plays">12,480,220</span>
+            <span class="time">3:34</span>
+            <label for="play" class="icon-btn" aria-label="Play Monsoon Lights"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label>
+          </li>
+          <li class="track">
+            <span class="rank">2</span>
+            <div class="cover c4 thumb"></div>
+            <div class="track-info"><h3>Golden Hour Drive</h3><p>Dune Parade</p></div>
+            <span class="plays">10,912,874</span>
+            <span class="time">4:02</span>
+            <label for="play" class="icon-btn" aria-label="Play Golden Hour Drive"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label>
+          </li>
+          <li class="track">
+            <span class="rank">3</span>
+            <div class="cover c2 thumb"></div>
+            <div class="track-info"><h3>Slow Tide</h3><p>Lila &amp; the Tides</p></div>
+            <span class="plays">9,305,118</span>
+            <span class="time">3:11</span>
+            <label for="play" class="icon-btn" aria-label="Play Slow Tide"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label>
+          </li>
+          <li class="track">
+            <span class="rank">4</span>
+            <div class="cover c3 thumb"></div>
+            <div class="track-info"><h3>Night Bus 47</h3><p>Kairo Sound</p></div>
+            <span class="plays">8,741,006</span>
+            <span class="time">2:58</span>
+            <label for="play" class="icon-btn" aria-label="Play Night Bus 47"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label>
+          </li>
+          <li class="track">
+            <span class="rank">5</span>
+            <div class="cover c6 thumb"></div>
+            <div class="track-info"><h3>Paper Planets</h3><p>Mira Vale</p></div>
+            <span class="plays">7,260,431</span>
+            <span class="time">3:47</span>
+            <label for="play" class="icon-btn" aria-label="Play Paper Planets"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label>
+          </li>
+          <li class="track">
+            <span class="rank">6</span>
+            <div class="cover c5 thumb"></div>
+            <div class="track-info"><h3>Green Room</h3><p>Teja Varma</p></div>
+            <span class="plays">6,118,092</span>
+            <span class="time">3:20</span>
+            <label for="play" class="icon-btn" aria-label="Play Green Room"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label>
+          </li>
+          <li class="track">
+            <span class="rank">7</span>
+            <div class="cover c7 thumb"></div>
+            <div class="track-info"><h3>Ripple Effect</h3><p>Sana Iqbal</p></div>
+            <span class="plays">5,534,780</span>
+            <span class="time">4:15</span>
+            <label for="play" class="icon-btn" aria-label="Play Ripple Effect"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label>
+          </li>
+          <li class="track">
+            <span class="rank">8</span>
+            <div class="cover c8 thumb"></div>
+            <div class="track-info"><h3>Four Corners</h3><p>Arjun Mehta Quartet</p></div>
+            <span class="plays">4,902,317</span>
+            <span class="time">5:06</span>
+            <label for="play" class="icon-btn" aria-label="Play Four Corners"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ ARTISTS ============ -->
+    <section class="section" id="artists">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Artists to follow</h2>
+          <a href="#join" class="see-all">Follow more</a>
+        </div>
+
+        <ul class="artists">
+          <li class="artist">
+            <div class="avatar c1">AR</div>
+            <h3>Ananya Rao</h3>
+            <p>Indie pop · 3.2M listeners</p>
+          </li>
+          <li class="artist">
+            <div class="avatar c2">LT</div>
+            <h3>Lila &amp; the Tides</h3>
+            <p>Dream folk · 2.7M listeners</p>
+          </li>
+          <li class="artist">
+            <div class="avatar c3">KS</div>
+            <h3>Kairo Sound</h3>
+            <p>Electronic · 2.1M listeners</p>
+          </li>
+          <li class="artist">
+            <div class="avatar c4">DP</div>
+            <h3>Dune Parade</h3>
+            <p>Synth rock · 4.0M listeners</p>
+          </li>
+          <li class="artist">
+            <div class="avatar c5">TV</div>
+            <h3>Teja Varma</h3>
+            <p>Acoustic · 1.4M listeners</p>
+          </li>
+          <li class="artist">
+            <div class="avatar c6">MV</div>
+            <h3>Mira Vale</h3>
+            <p>Ambient · 1.9M listeners</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ALBUMS ============ -->
+    <section class="section" id="albums">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>New &amp; notable albums</h2>
+          <a href="#popular" class="see-all">Top tracks</a>
+        </div>
+
+        <ul class="albums">
+          <li class="album">
+            <div class="cover c1"><label for="play" class="fab" aria-label="Play album Monsoon Lights"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Monsoon Lights</h3>
+            <p>Ananya Rao · 2026 · 11 songs</p>
+          </li>
+          <li class="album">
+            <div class="cover c4"><label for="play" class="fab" aria-label="Play album Golden Hour Drive"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Golden Hour Drive</h3>
+            <p>Dune Parade · 2026 · 9 songs</p>
+          </li>
+          <li class="album">
+            <div class="cover c2"><label for="play" class="fab" aria-label="Play album Salt &amp; Silk"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Salt &amp; Silk</h3>
+            <p>Lila &amp; the Tides · 2025 · 12 songs</p>
+          </li>
+          <li class="album">
+            <div class="cover c3"><label for="play" class="fab" aria-label="Play album Last Stop"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Last Stop</h3>
+            <p>Kairo Sound · 2025 · 10 songs</p>
+          </li>
+          <li class="album">
+            <div class="cover c7"><label for="play" class="fab" aria-label="Play album Concentric"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Concentric</h3>
+            <p>Sana Iqbal · 2025 · 8 songs</p>
+          </li>
+          <li class="album">
+            <div class="cover c6"><label for="play" class="fab" aria-label="Play album Small Orbits"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Small Orbits</h3>
+            <p>Mira Vale · 2024 · 7 songs</p>
+          </li>
+          <li class="album">
+            <div class="cover c5"><label for="play" class="fab" aria-label="Play album Front Porch"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Front Porch</h3>
+            <p>Teja Varma · 2024 · 9 songs</p>
+          </li>
+          <li class="album">
+            <div class="cover c8"><label for="play" class="fab" aria-label="Play album Compass Rose"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></label></div>
+            <h3>Compass Rose</h3>
+            <p>Arjun Mehta Quartet · 2023 · 6 songs</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PLAYLISTS ============ -->
+    <section class="section" id="playlists">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Playlists for every mood</h2>
+          <a href="#join" class="see-all">Create your own</a>
+        </div>
+
+        <ul class="playlists">
+          <li class="playlist pl-1">
+            <h3>Late Night Focus</h3>
+            <p>64 songs · 4 h 12 min</p>
+          </li>
+          <li class="playlist pl-2">
+            <h3>Morning Chai</h3>
+            <p>48 songs · 3 h 05 min</p>
+          </li>
+          <li class="playlist pl-3">
+            <h3>Gym Power Hour</h3>
+            <p>52 songs · 3 h 40 min</p>
+          </li>
+          <li class="playlist pl-4">
+            <h3>Rainy Day Acoustic</h3>
+            <p>40 songs · 2 h 30 min</p>
+          </li>
+          <li class="playlist pl-5">
+            <h3>Road Trip Anthems</h3>
+            <p>75 songs · 5 h 22 min</p>
+          </li>
+          <li class="playlist pl-6">
+            <h3>Weekend Dance Floor</h3>
+            <p>58 songs · 3 h 51 min</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SIGN UP ============ -->
+    <section class="section" id="join">
+      <div class="wrap">
+        <div class="join">
+          <div>
+            <h2>Hear it all, without the ads.</h2>
+            <p>Waveline Plus is free for 30 days, then ₹119 a month. Download songs for offline listening and skip as often as you like.</p>
+          </div>
+          <form class="join-form" onsubmit="return false">
+            <label for="email" class="sr-only">Email address</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+            <button type="submit" class="btn">Start free trial</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a href="#home" class="logo">
+          <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          Waveline
+        </a>
+        <p class="muted">Music for every mood, on every screen.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <h4>Explore</h4>
+        <a href="#popular">Popular</a>
+        <a href="#artists">Artists</a>
+        <a href="#albums">Albums</a>
+        <a href="#playlists">Playlists</a>
+      </nav>
+      <nav aria-label="Company">
+        <h4>Company</h4>
+        <a href="#home">About</a>
+        <a href="#home">Careers</a>
+        <a href="#home">Help centre</a>
+        <a href="#home">Privacy</a>
+      </nav>
+    </div>
+    <p class="copy wrap">&copy; 2026 Waveline. A student project. All artists and songs shown are fictional.</p>
+  </footer>
+
+  <!-- ============ MUSIC PLAYER (fixed at the bottom) ============ -->
+  <div class="player" role="region" aria-label="Music player">
+    <div class="np">
+      <div class="cover c1 np-cover"></div>
+      <div class="np-text">
+        <h3>Monsoon Lights</h3>
+        <p>Ananya Rao</p>
+      </div>
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </div>
+
+    <div class="controls">
+      <div class="buttons">
+        <button type="button" class="icon-btn" aria-label="Previous song"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zM20 6v12L9.5 12z"/></svg></button>
+        <label for="play" class="play-btn" aria-label="Play or pause">
+          <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="i-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        </label>
+        <button type="button" class="icon-btn" aria-label="Next song"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM4 6l10.5 6L4 18z"/></svg></button>
+      </div>
+      <div class="timeline">
+        <span class="t-now">0:00</span>
+        <div class="bar" role="progressbar" aria-label="Song progress"><span></span></div>
+        <span class="t-end">3:34</span>
+      </div>
+    </div>
+
+    <div class="volume">
+      <label for="vol" class="sr-only">Volume</label>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9zM16.5 12A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+      <input type="range" id="vol" min="0" max="100" value="70">
+    </div>
+  </div>
+
+</body>
+</html>
